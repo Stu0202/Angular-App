@@ -1,5 +1,5 @@
 
-import { Component, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
 
 
 @Component({
@@ -10,7 +10,8 @@ import { Component, signal } from "@angular/core";
       margin: 5px 10px;
       width:75px
     }
-  `
+  `,
+  //hangeDetection: ChangeDetectionStrategy.OnPush, //No trabajar con Zone.Js (solo para este componente)
 })
 export class CounterPageComponent {
 
