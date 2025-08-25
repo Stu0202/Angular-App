@@ -29,20 +29,8 @@ export class DragonballSuperPageComponent {
 
 
 
-  addCharacter() {
-    if (!this.name() || !this.power() || this.power() <= 0) {
-      return;
-    }
-    const newCharacter: Character = {
-      //id: this.characters().length + 1,
-      id: 1000,
-      name: this.name(),
-      power: this.power()
-    }
-
-    //this.characters.update((list) => [...list, newCharacter])
-    console.log({ newCharacter })
-    this.resetFields()
+  addCharacter(newCharacter: Character) {
+    this.characters.update((list) => [...list, newCharacter])
   }
 
   resetFields() {
